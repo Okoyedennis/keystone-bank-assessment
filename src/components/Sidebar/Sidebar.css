@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap");
+
 .sidebar {
   height: 80px;
   display: flex;
@@ -25,6 +27,9 @@
 .sidebar-toggle .menu-bars h2 {
   color: rgb(16, 72, 127);
   font-weight: 500;
+  font-family: "Roboto Slab", serif;
+  font-size: 3.5rem;
+  margin-left: .5rem;
 }
 
 .nav-menu {
@@ -134,5 +139,11 @@
 
   .sidebar {
     height: 80px;
+  }
+}
+
+@media (max-width: 586px) {
+  .sidebar-toggle .menu-bars h2 {
+    font-size: 3rem;
   }
 }

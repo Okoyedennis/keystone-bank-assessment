@@ -16,9 +16,11 @@ import "./Sidebar.css";
 
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(true);
+  const [flag, setFlag] = useState(false)
 
   const changeScreenWidth = () => {
     window.innerWidth <= 1300 ? setSidebar(false) : setSidebar(true);
+    window.innerWidth <= 1300 ? setFlag(true) : setFlag(false)
   };
 
   window.addEventListener("resize", changeScreenWidth);
@@ -96,9 +98,9 @@ const Sidebar = () => {
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items">
-            <li className="sidebar-toggle" onClick={showSidebar}>
+            <li className="sidebar-toggle">
               <Link to="#" className="menu-bars">
-                <AiOutlineClose />
+                {flag ? <AiOutlineClose onClick={showSidebar} /> : null}
                 <h2>RETRO</h2>
               </Link>
             </li>
