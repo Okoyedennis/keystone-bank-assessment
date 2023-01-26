@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app{
+  padding: 2rem !important;
+}
+
+
+@media (max-width: 768px) {
+ .app{
+  padding: 0rem !important;
+}
+
+}
